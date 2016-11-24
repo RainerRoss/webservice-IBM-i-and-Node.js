@@ -1,7 +1,7 @@
 # webservice-IBM-i-and-Node.js
 Providing a JSON webservice based on IBM i and Node.js
 
-The webservice powered by IBM i needs V7R1 and Node.js delivered with 5733-OPS
+##The webservice powered by IBM i needs V7R1 and Node.js
 ```
 5733-OPS Option 1 	Node.js 0.x
 5733-OPS Option 5 	Node.js 4.x
