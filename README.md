@@ -5,6 +5,7 @@ Providing a JSON webservice based on IBM i and Node.js
 ```
 5733-OPS Option 1 	Node.js 0.x
 5733-OPS Option 5 	Node.js 4.x
+5733-OPS Option 10 	Node.js 6.x
 ```
 Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/Node.js) to get started with Node.js on IBM i.
 
