@@ -32,16 +32,6 @@ $ npm -v
 3.10.8
 ```
 
-##Check your Node.js and Node Package Manager version
-
-```
-5250> qsh
-$ node -v
-v6.9.1
-$ npm -v
-3.10.8
-```
-
 ##Manual Install
 Create the following Directories
 
