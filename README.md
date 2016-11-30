@@ -10,16 +10,26 @@ Providing a JSON webservice based on IBM i and Node.js
 Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/Node.js) to get started with Node.js on IBM i.
 
 ##When you have installed Node.js 4.x set Node.js to V4
-
 ```
 5250> qsh
 $ /QOpenSys/QIBM/ProdData/OPS/Node4/bin/nodever.sh 4
+Node.js v4 will now be used. 
 ```
 ##When you have installed Node.js 6.x set Node.js to V6
 ```
 5250> qsh
 $ /QOpenSys/QIBM/ProdData/OPS/Node6/bin/nodever.sh 6
 Node.js v6 will now be used. 
+```
+
+##Check your Node.js and Node Package Manager version
+
+```
+5250> qsh
+$ node -v
+v6.9.1
+$ npm -v
+3.10.8
 ```
 
 ##Check your Node.js and Node Package Manager version
