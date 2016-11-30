@@ -83,7 +83,7 @@ http://yourip:8080/MyWebservice?name=A%25
 
 When the port `8080` is used on your machine use another port and change it in the `webservice.js` script
 ```
-line 27 var conf = {"port": 8020};
+line 27 }).listen(8080);
 ```
 
 ##check the port on IBM i: 
