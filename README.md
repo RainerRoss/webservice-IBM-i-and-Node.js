@@ -8,7 +8,7 @@ Providing a JSON webservice based on IBM i and Node.js
 ```
 Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/Node.js) to get started with Node.js on IBM i.
 
-#When you have installed Node.js 4.x set Node.js to V4
+##When you have installed Node.js 4.x set Node.js to V4
 
 ```
 5250> qsh
@@ -31,7 +31,7 @@ $ npm -v
 3.10.8
 ```
 
-#Manual Install
+##Manual Install
 Create the following Directories
 
 ```
@@ -39,7 +39,7 @@ Create the following Directories
 $ mkdir -p /home/node  (for the webservice.js)
 ```
 
-#Git Clone Install
+##Git Clone Install
 From a PASE shell enter the following
 
 ```
@@ -47,18 +47,18 @@ From a PASE shell enter the following
 $ git clone git@github.com:RainerRoss/webservice-IBM-i-and-Node.js.git
 ```
 
-#Start the webservice on your IBM i
+##Start the webservice on your IBM i
 
 ```
 5250> qsh
 $ node /home/node/webservice.js
 ```
 
-#Start the webservice in your browser
+##Start the webservice in your browser
 
 http://yourip:8080/MyWebservice?name=A%25
 
-#The result is the following JSON String
+##The result is the following JSON String
 ```
 {
    "success":true,
@@ -81,9 +81,12 @@ http://yourip:8080/MyWebservice?name=A%25
 }
 ```
 
-If the port `8080` is used on your machine please use another port and change it in the `webservice.js - line 27` 
+When the port `8080` is used on your machine use another port and change it in the `webservice.js` script
+```
+line 27 var conf = {"port": 8020};
+```
 
-check the port on IBM i: 
+##check the port on IBM i: 
 
 ```
 5250> netstat *cnn
