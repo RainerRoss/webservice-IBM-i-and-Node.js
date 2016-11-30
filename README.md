@@ -14,13 +14,21 @@ Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki
 5250> qsh
 $ /QOpenSys/QIBM/ProdData/OPS/Node4/bin/nodever.sh 4
 ```
+##When you have installed Node.js 6.x set Node.js to V6
+```
+5250> qsh
+$ /QOpenSys/QIBM/ProdData/OPS/Node6/bin/nodever.sh 6
+Node.js v6 will now be used. 
+```
 
-#Check your Node.js version
+##Check your Node.js and Node Package Manager version
 
 ```
 5250> qsh
 $ node -v
-for example v4.4.6  
+v6.9.1
+$ npm -v
+3.10.8
 ```
 
 #Manual Install
