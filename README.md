@@ -40,7 +40,7 @@ Create the following Directories
 $ mkdir -p /home/node  (for the webservice.js)
 ```
 
-##Git Clone Install
+Git Clone Install
 From a PASE shell enter the following
 
 ```
@@ -48,18 +48,18 @@ From a PASE shell enter the following
 $ git clone git@github.com:RainerRoss/webservice-IBM-i-and-Node.js.git
 ```
 
-##Start the webservice on your IBM i
+Start the webservice on your IBM i
 
 ```
 5250> qsh
 $ node /home/node/webservice.js
 ```
 
-##Start the webservice in your browser
+Start the webservice in your browser
 
 http://yourip:8080/MyWebservice?name=A%25
 
-##The result is the following JSON String
+The result is the following JSON String
 ```
 {
    "success":true,
@@ -87,7 +87,7 @@ When the port `8080` is used on your machine use another port and change it in t
 line 27 }).listen(8080);
 ```
 
-##check the port on IBM i: 
+check the port on IBM i: 
 
 ```
 5250> netstat *cnn
