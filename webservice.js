@@ -1,8 +1,8 @@
-var http	= require('http');
-var url		= require('url');
+var http		= require('http');
+var url			= require('url');
 var querystring	= require('querystring');
-var db		= require('/QOpenSys/QIBM/ProdData/OPS/Node6/os400/db2i/lib/db2');
-var util	= require('util');
+var db			= require('/QOpenSys/QIBM/ProdData/OPS/Node6/os400/db2i/lib/db2');
+var util		= require('util');
 
 var responseData = {
 	success: '',
