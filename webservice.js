@@ -4,13 +4,22 @@ var querystring	= require('querystring');
 var db			= require('/QOpenSys/QIBM/ProdData/OPS/Node6/os400/db2i/lib/db2');
 var util		= require('util');
 
-function timerStart() {
-	return (new Date()).getTime();
+function Runtime() {
+	this.starttime;
+	this.runtime;
 }
 
-function timerEnd(start) {
-	return ((new Date()).getTime() - start) + ' ms';
-}
+Runtime.prototype = {
+	start: function() {
+		this.starttime = new Date();
+	},
+	print: function() {
+		this.runtime = new Date() - this.starttime;
+		console.log('Runtime: ' + this.runtime + ' ms');
+	}
+};
+
+var MyRuntime = new Runtime();
 
 var responseData = {
 	success: '',
@@ -20,18 +29,18 @@ var responseData = {
 };
 
 http.createServer(function (request, response) {
-	var start = timerStart();	
+	MyRuntime.start();	
 	var pathname = url.parse(request.url).pathname;
 	var values = querystring.parse(url.parse(request.url).query);
-	
+
 	console.log('Pathname: ' + pathname);
-	console.log('Querystring: ' + url.parse(request.url).query);	
+	console.log('Querystring: ' + url.parse(request.url).query);
 	console.log('Values:' + JSON.stringify(values));
 
 	response.writeHead(200, {'Content-Type': 'application/json'});
 	response.end(readCustomers(values.name));
-	
-	console.log('Runtime: ' + timerEnd(start));
+
+	MyRuntime.print();
 }).listen(8080);
 
 function readCustomers(value) {
