@@ -4,6 +4,14 @@ var querystring	= require('querystring');
 var db			= require('/QOpenSys/QIBM/ProdData/OPS/Node6/os400/db2i/lib/db2');
 var util		= require('util');
 
+function timerStart() {
+	return (new Date()).getTime();
+}
+
+function timerEnd(start) {
+	return ((new Date()).getTime() - start) + ' ms';
+}
+
 var responseData = {
 	success: '',
 	errmsg: '',
@@ -31,10 +39,10 @@ function readCustomers(value) {
 	var where  = util.format("where lstnam like '%s'", value);
 	var sql    = select + ' ' + where;
 	var data   = '';
-	console.log("Sql: " + sql);
+	console.log('SQL: ' + sql);
 	db.init();
-	db.conn("*LOCAL");
-	db.exec("SET SCHEMA QIWS");
+	db.conn('*LOCAL');
+	db.exec('SET SCHEMA QIWS');
 	db.exec(sql, function(rows) {
 		data = createResponse(rows);
 	});
@@ -55,12 +63,4 @@ function createResponse(rows) {
 		responseData.items   = '';
 	}
 	return JSON.stringify(responseData);
-}
-
-function timerStart() {
-	return (new Date()).getTime();
-}
-
-function timerEnd(start) {
-	return ((new Date()).getTime() - start) + "ms";
 }
