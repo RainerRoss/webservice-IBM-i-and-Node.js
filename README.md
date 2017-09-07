@@ -1,5 +1,5 @@
-# webservice-IBM-i-and-Node.js
-Providing a JSON webservice based on IBM i and Node.js
+## webservice-IBM-i-and-Node.js
+# Providing a JSON webservice based on IBM i and Node.js
 
 The webservice powered by IBM i needs V7R1 and Node.js
 ```
@@ -9,20 +9,14 @@ The webservice powered by IBM i needs V7R1 and Node.js
 ```
 Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/Node.js) to get started with Node.js on IBM i.
 
-When you have installed Node.js 4.x set Node.js to V4
-```
-5250> qsh
-$ /QOpenSys/QIBM/ProdData/OPS/Node4/bin/nodever.sh 4
-Node.js v4 will now be used. 
-```
-When you have installed Node.js 6.x set Node.js to V6
+# When you have installed Node.js 6.x set Node.js to V6
 ```
 5250> qsh
 $ /QOpenSys/QIBM/ProdData/OPS/Node6/bin/nodever.sh 6
 Node.js v6 will now be used. 
 ```
 
-Check your Node.js and Node Package Manager version
+# Check your Node.js and Node Package Manager version
 
 ```
 5250> qsh
@@ -32,7 +26,7 @@ $ npm -v
 3.10.8
 ```
 
-Manual Install
+# Manual Install
 Create the following Directories
 
 ```
@@ -40,7 +34,7 @@ Create the following Directories
 $ mkdir -p /home/node  (for the webservice.js)
 ```
 
-Git Clone Install
+# Git Clone Install
 From a PASE shell enter the following
 
 ```
@@ -48,14 +42,14 @@ From a PASE shell enter the following
 $ git clone git@github.com:RainerRoss/webservice-IBM-i-and-Node.js.git
 ```
 
-Start the webservice on your IBM i
+# Start the webservice on your IBM i
 
 ```
 5250> qsh
 $ node /home/node/webservice.js
 ```
 
-Start the webservice in your browser
+# Start the webservice in your browser
 
 http://yourip:8080/MyWebservice?name=A%25
 
