@@ -1,5 +1,4 @@
-# webservice-IBM-i-and-Node.js
-## Providing a JSON webservice based on IBM i and Node.js
+# Providing a JSON webservice based on IBM i and Node.js
 
 The webservice powered by IBM i needs V7R1 and Node.js
 ```
