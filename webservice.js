@@ -29,7 +29,7 @@ var responseData = {
 };
 
 http.createServer(function (request, response) {
-	MyRuntime.start();	
+	MyRuntime.start();
 	var pathname = url.parse(request.url).pathname;
 	var values = querystring.parse(url.parse(request.url).query);
 
