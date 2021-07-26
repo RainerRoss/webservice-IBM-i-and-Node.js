@@ -134,14 +134,26 @@ The result is the following JSON String
     ]
 }
 ```
-
 When the port `8080` is used on your machine use another port and change it in the `ReadCustomers.js` script
 ```
 line 18 }).listen(8080);
 ```
-
 check the port on IBM i 
-
 ```
 5250> netstat *cnn
+```
+## Performance
+The webservice ist very fast - look at the runtime
+```
+Runtime: 3ms                 
+Pathname: /MyWebservice      
+Runtime: 2ms                 
+Pathname: /MyWebservice      
+Runtime: 2ms                 
+Pathname: /MyWebservice      
+Runtime: 1ms                 
+Pathname: /MyWebservice      
+Runtime: 1ms                 
+Pathname: /MyWebservice      
+Runtime: 1ms                 
 ```
