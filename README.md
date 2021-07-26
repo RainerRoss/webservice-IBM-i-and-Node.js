@@ -2,7 +2,7 @@
 
 ## Install Node.js with YUM
 ```
-5250> qp2term
+5250> call qp2term
 ===> echo 'PATH=/QOpenSys/pkgs/bin:$PATH' >> $HOME/.profile      
 export PATH >> $HOME/.profile                               
 ===> yum install nodejs14
