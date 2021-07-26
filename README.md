@@ -1,4 +1,4 @@
-# Providing a REST JSON webservice based on IBM i, DB2 and Node.js
+# Providing a REST JSON webservice with IBM i, DB2 and Node.js
 With Node.js you are able to provide very easy and with a few lines of code a REST webservice on your IBM i
 
 ## Performance
