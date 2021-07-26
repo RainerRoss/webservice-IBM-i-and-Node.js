@@ -9,12 +9,12 @@ export PATH >> $HOME/.profile
 ```
 ## Verify your Node.js installation
 ```
-5250> qp2term                        
+5250> call qp2term                        
 ===> yum list nodejs14
 ```
 ## Check your Node.js and npm (Node Package Manager) version
 ```
-5250> qp2term                        
+5250> call qp2term                        
 ===> node -v
 v14.17.2
 ===> npm -v
@@ -22,81 +22,120 @@ v14.17.2
 ```
 ## Install the Node.js DB2 connector with npm (Node Package Manager)
 ```
-5250> qp2term
+5250> call qp2term
 ===> npm install idb-connector
 ```
-
-
-Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/Node.js) to get started with Node.js on IBM i.
-
-## When you have installed Node.js 6.x set Node.js to V6
-```
-5250> qsh
-$ /QOpenSys/QIBM/ProdData/OPS/Node6/bin/nodever.sh 6
-Node.js v6 will now be used. 
-```
-
-## Check your Node.js and Node Package Manager version
-
-```
-5250> qsh
-$ node -v
-v6.9.1
-$ npm -v
-3.10.8
-```
-
 ## Manual Install
 Create the following Directories
 
 ```
-5250> qsh
-$ mkdir -p /home/node  (for the webservice.js)
+5250> call qp2term
+===> mkdir -p /home/node  (for the ReadCustomers.js)
 ```
 
 ## Git Clone Install
 From a PASE shell enter the following
 
 ```
-5250> qsh
+5250> call qp2term
 $ git clone git@github.com:RainerRoss/webservice-IBM-i-and-Node.js.git
 ```
 
 ## Start the webservice on your IBM i
 
 ```
-5250> qsh
-$ node /home/node/webservice.js
+5250> call qp2term
+===> node /home/node/ReadCustomers.js
 ```
 
 ## Start the webservice in your browser
 
-http://yourip:8080/MyWebservice?name=A%25
+http://yourip:8080/MyWebservice
 
 The result is the following JSON String
 ```
 {
-   "success":true,
-   "errmsg":"",
-   "records":2,
-   "items":[
-      {
-         "CUSNUM":"846283",
-         "LSTNAM":"Alison",
-         "CITY":"Isle",
-         "BALDUE":"10.00"
-      },
-      {
-         "CUSNUM":"583990",
-         "LSTNAM":"Abraham",
-         "CITY":"Isle",
-         "BALDUE":"500.00" 
-      }
-   ]
+    "success": true,
+    "error": null,
+    "records": 12,
+    "data": [
+        {
+            "CUSNUM": "938472",
+            "LSTNAM": "Henning",
+            "CITY": "Dallas",
+            "BALDUE": "37.00"
+        },
+        {
+            "CUSNUM": "839283",
+            "LSTNAM": "Jones",
+            "CITY": "Clay",
+            "BALDUE": "100.00"
+        },
+        {
+            "CUSNUM": "392859",
+            "LSTNAM": "Vine",
+            "CITY": "Broton",
+            "BALDUE": "439.00"
+        },
+        {
+            "CUSNUM": "938485",
+            "LSTNAM": "Johnson",
+            "CITY": "Helen",
+            "BALDUE": "3987.50"
+        },
+        {
+            "CUSNUM": "397267",
+            "LSTNAM": "Tyron",
+            "CITY": "Hector",
+            "BALDUE": ".00"
+        },
+        {
+            "CUSNUM": "389572",
+            "LSTNAM": "Stevens",
+            "CITY": "Denver",
+            "BALDUE": "58.75"
+        },
+        {
+            "CUSNUM": "846283",
+            "LSTNAM": "Alison",
+            "CITY": "Isle",
+            "BALDUE": "10.00"
+        },
+        {
+            "CUSNUM": "475938",
+            "LSTNAM": "Doe",
+            "CITY": "Sutter",
+            "BALDUE": "250.00"
+        },
+        {
+            "CUSNUM": "693829",
+            "LSTNAM": "Thomas",
+            "CITY": "Casper",
+            "BALDUE": ".00"
+        },
+        {
+            "CUSNUM": "593029",
+            "LSTNAM": "Williams",
+            "CITY": "Dallas",
+            "BALDUE": "25.00"
+        },
+        {
+            "CUSNUM": "192837",
+            "LSTNAM": "Lee",
+            "CITY": "Hector",
+            "BALDUE": "489.50"
+        },
+        {
+            "CUSNUM": "583990",
+            "LSTNAM": "Abraham",
+            "CITY": "Isle",
+            "BALDUE": "500.00"
+        }
+    ]
 }
 ```
 
-When the port `8080` is used on your machine use another port and change it in the `webservice.js` script
+When the port `8080` is used on your machine use another port and change it in the `ReadCustomers.js` script
 ```
 line 27 }).listen(8080);
 ```
