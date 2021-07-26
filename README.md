@@ -1,5 +1,21 @@
 # Providing a JSON webservice based on IBM i, DB2 and Node.js
 
+## Performance
+The webservice ist very fast - look at the runtime
+```
+Pathname: /MyWebservice 
+Runtime: 3ms                 
+Pathname: /MyWebservice      
+Runtime: 2ms                 
+Pathname: /MyWebservice      
+Runtime: 2ms                 
+Pathname: /MyWebservice      
+Runtime: 1ms                 
+Pathname: /MyWebservice      
+Runtime: 1ms                 
+Pathname: /MyWebservice      
+Runtime: 1ms                 
+```
 ## Install Node.js with YUM
 ```
 5250> call qp2term
@@ -141,20 +157,4 @@ line 18 }).listen(8080);
 check the port on IBM i 
 ```
 5250> netstat *cnn
-```
-## Performance
-The webservice ist very fast - look at the runtime
-```
-Pathname: /MyWebservice 
-Runtime: 3ms                 
-Pathname: /MyWebservice      
-Runtime: 2ms                 
-Pathname: /MyWebservice      
-Runtime: 2ms                 
-Pathname: /MyWebservice      
-Runtime: 1ms                 
-Pathname: /MyWebservice      
-Runtime: 1ms                 
-Pathname: /MyWebservice      
-Runtime: 1ms                 
 ```
