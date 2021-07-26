@@ -20,13 +20,10 @@ v14.17.2
 ===> npm -v
 6.14.13
 ```
-
-## Install the Node.js DB2 Connector with npm (Node Package Manager)
+## Install the Node.js DB2 connector with npm (Node Package Manager)
 ```
 5250> qp2term
-===> echo 'PATH=/QOpenSys/pkgs/bin:$PATH' >> $HOME/.profile      
-export PATH >> $HOME/.profile                               
-===> yum install nodejs14
+===> npm install idb-connector
 ```
 
 
