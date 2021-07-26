@@ -1,11 +1,35 @@
-# Providing a JSON webservice based on IBM i and Node.js
+# Providing a JSON webservice based on IBM i, DB2 and Node.js
 
-The webservice powered by IBM i needs V7R1 and Node.js
+## Install Node.js with YUM
 ```
-5733-OPS Option 1 	Node.js 0.x
-5733-OPS Option 5 	Node.js 4.x
-5733-OPS Option 10 	Node.js 6.x
+5250> qp2term
+===> echo 'PATH=/QOpenSys/pkgs/bin:$PATH' >> $HOME/.profile      
+export PATH >> $HOME/.profile                               
+===> yum install nodejs14
 ```
+## Verify your Node.js installation
+```
+5250> qp2term                        
+===> yum list nodejs14
+```
+## Check your Node.js and npm version
+```
+5250> qp2term                        
+===> node -v
+v14.17.2
+===> npm -v
+6.14.13
+```
+
+## Install the Node.js DB2 Connector with npm (Node Package Manager)
+```
+5250> qp2term
+===> echo 'PATH=/QOpenSys/pkgs/bin:$PATH' >> $HOME/.profile      
+export PATH >> $HOME/.profile                               
+===> yum install nodejs14
+```
+
+
 Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/Node.js) to get started with Node.js on IBM i.
 
 ## When you have installed Node.js 6.x set Node.js to V6
