@@ -137,7 +137,7 @@ The result is the following JSON String
 
 When the port `8080` is used on your machine use another port and change it in the `ReadCustomers.js` script
 ```
-line 27 }).listen(8080);
+line 18 }).listen(8080);
 ```
 
 check the port on IBM i: 
