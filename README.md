@@ -1,5 +1,5 @@
 # Providing a JSON webservice based on IBM i, DB2 and Node.js
-With Node.js you are able to create very easy and with a few lines of code a REST webservice
+With Node.js you are able to create very easy and with a few lines of code a REST webservice on your IBM i
 
 ## Performance
 The webservice ist very fast - look at the runtime
