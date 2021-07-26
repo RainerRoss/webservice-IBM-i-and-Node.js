@@ -38,7 +38,7 @@ From a PASE shell enter the following
 
 ```
 5250> call qp2term
-$ git clone git@github.com:RainerRoss/webservice-IBM-i-and-Node.js.git
+===> git clone git@github.com:RainerRoss/webservice-IBM-i-and-Node.js.git
 ```
 
 ## Start the webservice on your IBM i
