@@ -12,7 +12,7 @@ export PATH >> $HOME/.profile
 5250> qp2term                        
 ===> yum list nodejs14
 ```
-## Check your Node.js and npm version
+## Check your Node.js and npm (Node Package Manager) version
 ```
 5250> qp2term                        
 ===> node -v
