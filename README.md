@@ -17,53 +17,6 @@ Runtime: 1ms
 Pathname: /MyWebservice      
 Runtime: 1ms                 
 ```
-## Install Node.js with YUM
-```
-5250> call qp2term
-===> echo 'PATH=/QOpenSys/pkgs/bin:$PATH' >> $HOME/.profile      
-export PATH >> $HOME/.profile                               
-===> yum install nodejs14
-```
-## Verify your Node.js installation
-```
-5250> call qp2term                        
-===> yum list nodejs14
-```
-## Check your Node.js and npm (Node Package Manager) version
-```
-5250> call qp2term                        
-===> node -v
-v14.17.2
-===> npm -v
-6.14.13
-```
-## Install the Node.js DB2 connector with npm (Node Package Manager)
-```
-5250> call qp2term
-===> npm install idb-connector
-```
-## Manual Install
-Create the following Directories
-
-```
-5250> call qp2term
-===> mkdir -p /home/node  (for the ReadCustomers.js)
-```
-
-## Git Clone Install
-From a PASE shell enter the following
-
-```
-5250> call qp2term
-===> git clone git@github.com:RainerRoss/webservice-IBM-i-and-Node.js.git
-```
-
-## Start the webservice on your IBM i
-
-```
-5250> call qp2term
-===> node /home/node/ReadCustomers.js
-```
 
 ## Start the webservice in your browser
 
@@ -151,6 +104,54 @@ The result is the following JSON String
     ]
 }
 ```
+## Install Node.js with YUM
+```
+5250> call qp2term
+===> echo 'PATH=/QOpenSys/pkgs/bin:$PATH' >> $HOME/.profile      
+export PATH >> $HOME/.profile                               
+===> yum install nodejs14
+```
+## Verify your Node.js installation
+```
+5250> call qp2term                        
+===> yum list nodejs14
+```
+## Check your Node.js and npm (Node Package Manager) version
+```
+5250> call qp2term                        
+===> node -v
+v14.17.2
+===> npm -v
+6.14.13
+```
+## Install the Node.js DB2 connector with npm (Node Package Manager)
+```
+5250> call qp2term
+===> npm install idb-connector
+```
+## Manual Install
+Create the following Directories
+
+```
+5250> call qp2term
+===> mkdir -p /home/node  (for the ReadCustomers.js)
+```
+
+## Git Clone Install
+From a PASE shell enter the following
+
+```
+5250> call qp2term
+===> git clone git@github.com:RainerRoss/webservice-IBM-i-and-Node.js.git
+```
+
+## Start the webservice on your IBM i
+
+```
+5250> call qp2term
+===> node /home/node/ReadCustomers.js
+```
+
 When the port `8080` is used on your machine use another port and change it in the `ReadCustomers.js` script
 ```
 line 18 }).listen(8080);
