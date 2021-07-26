@@ -140,7 +140,7 @@ When the port `8080` is used on your machine use another port and change it in t
 line 18 }).listen(8080);
 ```
 
-check the port on IBM i: 
+check the port on IBM i 
 
 ```
 5250> netstat *cnn
